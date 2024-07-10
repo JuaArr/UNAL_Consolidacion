@@ -1,10 +1,16 @@
+import os
+
 from read_format import read_old
 
 def main() -> None:
-	file_name = "1. KAMS-IMPAR_S2-M45-2.0KG_CAR. 2. KAMS-IPARM_S3-M24-2.0KG_CAR. 3. KAMS-IPARM_S3-M39-2.0KG_CAR. 4. KAMS-IPARM_S4-M4-2.0KG_CAR..TXT"
-	samples = read_old.samples_data(file_name)
+	lecturas_dir = "./lecturas/"
+	filtro_dir = lecturas_dir + "filtro/"
 
-	# read_old.load_file(file_name)
+	for item in os.listdir(lecturas_dir):
+		item_path = os.path.join(lecturas_dir, item)
+		if os.path.isfile(item_path):
+			samples = read_old.samples_data(item_path)
+			read_old.load_file(item_path, samples, filtro_dir)
 
 if __name__ == "__main__":
 	main()
