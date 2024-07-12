@@ -1,0 +1,156 @@
+{
+    "datos_iniciales": [
+        {
+            "parametro": "altura",
+            "valor": [19.95, 19.95, 19.81],
+            "unidad": "mm"
+        },
+        {
+            "parametro": "diametro",
+            "valor": [50.88, 50.86, 50.86],
+            "unidad": "mm"
+        },
+        {
+            "parametro": "Gs",
+            "valor": 2.60,
+            "unidad": "-"
+        },
+        {
+            "parametro": "contenido_agua_inicial",
+            "valor": 0.685,
+            "unidad": "-"
+        }, 
+        {
+            "parametro": "masa_bloque+piedra",
+            "valor": 251.44,
+            "unidad": "g"
+        },
+        {
+            "parametro": "masa_inicial",
+            "valor": 62.23,
+            "unidad": "g"
+        }
+    ],
+    "lecturas": [
+        {
+            "etapa": 0,
+            "deformacion": {
+                "inicial": 0.000,
+                "final": -0.015,
+                "unidad": "mm"
+            },
+            "carga": {
+                "valor": 0.0,
+                "unidad": "kg"
+            }
+        },
+        {
+            "etapa": 1,
+            "deformacion": {
+                "inicial": -0.015,
+                "final": -0.195,
+                "unidad": "mm"
+            },
+            "carga": {
+                "valor": 0.5,
+                "unidad": "kg"
+            }
+        },
+        {
+            "etapa": 2,
+            "deformacion": {
+                "inicial": -0.195,
+                "final": -0.463,
+                "unidad": "mm"
+            },
+            "carga": {
+                "valor": 1.0,
+                "unidad": "kg"
+            }
+        },
+        {
+            "etapa": 3,
+            "deformacion": {
+                "inicial": -0.463,
+                "final": -1.032,
+                "unidad": "mm"
+            },
+            "carga": {
+                "valor": 2.0,
+                "unidad": "kg"
+            }
+        },
+        {
+            "etapa": 4,
+            "deformacion": {
+                "inicial": -1.032,
+                "final": -2.220,
+                "unidad": "mm"
+            },
+            "carga": {
+                "valor": 4.0,
+                "unidad": "kg"
+            }
+        },
+        {
+            "etapa": 5,
+            "deformacion": {
+                "inicial": -2.220,
+                "final": -3.819,
+                "unidad": "mm"
+            },
+            "carga": {
+                "valor": 8.0,
+                "unidad": "kg"
+            }
+        },
+        {
+            "etapa": 6,
+            "deformacion": {
+                "inicial": -3.819,
+                "final": -5.475,
+                "unidad": "mm"
+            },
+            "carga": {
+                "valor": 16.0,
+                "unidad": "kg"
+            }
+        },
+        {
+            "etapa": 7,
+            "deformacion": {
+                "inicial": -5.475,
+                "final": -6.351,
+                "unidad": "mm"
+            },
+            "carga": {
+                "valor": 32.0,
+                "unidad": "kg"
+            }
+        },
+        {
+            "etapa": 8,
+            "deformacion": {
+                "inicial": -6.351,
+                "final": -6.289,
+                "unidad": "mm"
+            },
+            "carga": {
+                "valor": 16.0,
+                "unidad": "kg"
+            }
+        },
+        {
+            "etapa": 9,
+            "deformacion": {
+                "inicial": -6.289,
+                "final": -6.130,
+                "unidad": "mm"
+            },
+            "carga": {
+                "valor": 8.0,
+                "unidad": "kg"
+            }
+        }
+    ]
+}
