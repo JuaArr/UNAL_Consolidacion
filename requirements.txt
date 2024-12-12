@@ -16,3 +16,7 @@ openpyxl
 scienceplots
 scipy
 scikit-learn
+flet
+flet-desktop
+flet-cli
+flet-web

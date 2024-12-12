@@ -13,4 +13,4 @@ def main() -> None:
 			read_old.load_file(item_path, samples, filtro_dir)
 
 if __name__ == "__main__":
-	main()
+	main() 
