@@ -22,12 +22,12 @@
         }, 
         {
             "parametro": "masa_bloque+piedra",
-            "valor": 251.12,
+            "valor": 251.44,
             "unidad": "g"
         },
         {
             "parametro": "masa_inicial",
-            "valor": 57.06,
+            "valor": 56.57,
             "unidad": "g"
         }
     ],
@@ -132,7 +132,7 @@
             "etapa": 8,
             "deformacion": {
                 "inicial": -10.205,
-                "final": -10.205,
+                "final": -10.150,
                 "unidad": "mm"
             },
             "carga": {
@@ -143,8 +143,8 @@
         {
             "etapa": 9,
             "deformacion": {
-                "inicial": -10.205,
-                "final": -10.703,
+                "inicial": -10.150,
+                "final": -10.005,
                 "unidad": "mm"
             },
             "carga": {

@@ -1,6 +1,6 @@
 import os
 
-from read_format import read_old
+from read_data import read_old
 
 def main() -> None:
 	lecturas_dir = "./lecturas/"

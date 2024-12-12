@@ -17,17 +17,17 @@
         },
         {
             "parametro": "contenido_agua_inicial",
-            "valor": 1.349,
+            "valor": 1.394,
             "unidad": "-"
         }, 
         {
             "parametro": "masa_bloque+piedra",
-            "valor": 250.00,
+            "valor": 253.14,
             "unidad": "g"
         },
         {
             "parametro": "masa_inicial",
-            "valor": 71.37,
+            "valor": 77.37,
             "unidad": "g"
         }
     ],
