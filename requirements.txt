@@ -20,3 +20,4 @@ flet
 flet-desktop
 flet-cli
 flet-web
+pyfonts
