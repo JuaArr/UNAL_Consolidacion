@@ -2,19 +2,22 @@ import os
 from pathlib import Path
 from read_data import read_old
 
+results_dir = Path("./test/old1")
+loading_dir = results_dir / "loading_data"
+properties_dir = results_dir / "properties"
+unloading_dir = results_dir / "unloading_data"
+export_dir = Path("./export")
+
 def main() -> None:
-	results_dir = Path("./test/data/old1")
-	export_dir = Path("./export")
+	data = read_old.read_folder(loading_dir)
+	print(data.keys())
 
-	read_old.read_folder(results_dir)
-	# lecturas_dir = "./lecturas/"
-	# filtro_dir = lecturas_dir + "filtro/"
-
-	# for item in os.listdir(lecturas_dir):
-	# 	item_path = os.path.join(lecturas_dir, item)
-	# 	if os.path.isfile(item_path):
-	# 		samples = read_old.samples_data(item_path)
-	# 		read_old.load_file(item_path, samples, filtro_dir)
+	# Revisar a cuanto tiempo corresponde cada toma de datos ... 
+	# Cargar datos de descarga (dentro de un .txt)
+	# Cargar datos de la muestra (dentro de un .txt)
+	# Juntar carga y descarga
+	# Generar tablas asociadas
+	# Graficar
 
 if __name__ == "__main__":
 	os.system("cls")

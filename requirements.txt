@@ -1,13 +1,3 @@
-notebook
-jupyterlab
-jupyter-book==0.15.1
-jupyterlab-lsp
-jupyterlab-git
-vpython
-ipython
-jupyter-collaboration
-jupyterlab-link-share
-jupyterlab_vpython
 pandas
 numpy
 matplotlib
@@ -21,3 +11,4 @@ flet-desktop
 flet-cli
 flet-web
 pyfonts
+pytest
