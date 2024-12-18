@@ -4,8 +4,9 @@ from read_data import read_old
 
 def main() -> None:
 	results_dir = Path("./test/data/old1")
+	export_dir = Path("./export")
 
-	read_old.load_data(results_dir)
+	read_old.read_folder(results_dir)
 	# lecturas_dir = "./lecturas/"
 	# filtro_dir = lecturas_dir + "filtro/"
 

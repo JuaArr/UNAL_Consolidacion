@@ -1,19 +1,34 @@
 import pandas as pd
 import numpy as np
-from openpyxl import load_workbook
 from pathlib import Path
-import os
 
 expected_dtype: dict[int: str] = {0: "int", 1: "float", 2: "str", 3: "int"}
 
-def load_data(data_path: Path) -> None:
-	data: dict = dict()
-	print(next(data_path.glob("*.txt")))
-	for file_path in data_path.iterdir():
+def read_file(file_path: Path, probes: list[str], n_probes: int) -> np.ndarray:
+	container = dict.fromkeys(probes)
+	data = pd.read_csv(file_path, header = None, dtype = expected_dtype)
+
+	for idx in range(n_probes):
+		probe_data = data[data.iloc[:, 3] == (idx+1)].values
+		probe_data = probe_data[:, 0:2]
+		probe_data[:, 0] = np.arange(start = 1, stop = probe_data.shape[0]+1)
+		
+		container[probes[idx]] = probe_data
+	
+	return container
+
+def read_folder(folder_path: Path) -> None:
+	
+	_file_path = next(folder_path.glob("*.txt"))
+	_data =  pd.read_csv(_file_path, header = None, dtype = expected_dtype)
+
+	n_probes = len(_data.iloc[:, 3].drop_duplicates().values)
+	probes = [i.split("_")[-2] for i in _file_path.stem.split("-")]
+
+	for file_path in folder_path.iterdir():
 
 		# print(file_path.stem.split("-"))
-		pd.read_csv(file_path, header = None, dtype = expected_dtype)
-
+		read_file(file_path, probes, n_probes)
 # def samples_data(file_name: str) -> dict:
 # 	samples = dict()
 # 	file_name = os.path.splitext(file_name)[0]
