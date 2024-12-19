@@ -12,3 +12,5 @@ flet-cli
 flet-web
 pyfonts
 pytest
+tqdm
+rich
