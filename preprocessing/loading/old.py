@@ -27,4 +27,5 @@ def read_folder(input_path: Path, probes: list[str]) -> dict[str: dict]:
 
 def save_loading_data(input_path: Path, export_path: Path, probes: list[str]) -> None:
 	loading_data = read_folder(input_path, probes)
-	for probe in loading_data.keys(): np.savez(export_path/probe/"loading.npz", **loading_data[probe])
+	for probe in loading_data.keys():
+		np.savez(export_path/probe/"loading.npz", **loading_data[probe])

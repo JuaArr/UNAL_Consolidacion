@@ -1,6 +1,6 @@
 parametro, valor, unidad
-height, 50.94, mm
-diameter, 19.75, mm
+h, 50.94, mm
+d, 19.75, mm
 Gs, 2.655, -
 w, 0.444, -
 ma+m, 176.54, g
