@@ -1,1 +1,8 @@
-
+parametro, valor, unidad
+height, 50.90, mm
+diameter, 19.67, mm
+Gs, 2.415, -
+w, 1.394, -
+ma+m, 180.36, g
+ma, 102.99, g
+mb, 253.14, g

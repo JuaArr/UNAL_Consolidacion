@@ -1,2 +1,8 @@
-yaptaso, 121
-asas, 124sa
+parametro, valor, unidad
+height, 50.97, mm
+diameter, 19.87, mm
+Gs, 2.642, -
+w, 0.460, -
+ma+m, 174.57, g
+ma, 103.79, g
+mb, 255.73, g

@@ -15,14 +15,16 @@ def read_file(file_path: Path, container: dict[str: dict], probes: list[str], lo
 		
 		container[probes[idx]][loads[idx]] = probe_data
 
-def read_folder(input_path: Path) -> dict[str: dict]:
-	_file_path = next(input_path.glob("*.txt"))
-	probes = [_name_section.split('_')[-2] for _name_section in _file_path.stem.split('-')]
-
+def read_folder(input_path: Path, probes: list[str]) -> dict[str: dict]:
 	container = dict.fromkeys(probes, dict())
+
 	for file_path in input_path.iterdir():
 		file_name = file_path.stem
-		loads = [float(name_section.split('_')[-1]) for name_section in file_name.split('-')] # Por si son diferentes (no deberia pero aja ...)
+		loads = [str(name_section.split('_')[-1]) for name_section in file_name.split('-')] # Por si son diferentes (no deberia pero aja ...)
 		read_file(file_path, container, probes, loads)
 
 	return container
+
+def save_loading_data(input_path: Path, export_path: Path, probes: list[str]) -> None:
+	loading_data = read_folder(input_path, probes)
+	for probe in loading_data.keys(): np.savez(export_path/probe/"loading.npz", **loading_data[probe])
