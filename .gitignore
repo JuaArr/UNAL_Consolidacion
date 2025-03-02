@@ -169,3 +169,4 @@ update.ps1
 
 export/
 test/
+data_sample/simultaneous/loading_data/*/
