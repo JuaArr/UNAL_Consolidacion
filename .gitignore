@@ -163,8 +163,7 @@ cython_debug/
 
 # Powershell scripts
 
-/*.ps1
-/*.txt
+update.ps1
 
 # Directory
 
