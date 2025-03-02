@@ -163,7 +163,7 @@ cython_debug/
 
 # Powershell scripts
 
-*.ps1
+/*.ps1
 /*.txt
 
 # Directory

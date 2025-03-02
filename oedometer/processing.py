@@ -178,11 +178,11 @@ def calculate_strain_energy_params(stress: npt.NDArray, work: npt.NDArray, save_
 	pre_stress = opt.newton(func=intersection_two_functions, x0=10.0, args=(linear_model, params_w1, linear_model, params_w2))
 
 	# Metrics
-	rmse_w1 = root_mean_squared_error(work[slice_w1], semilog_model(stress[slice_w1], params_w1))
-	r2_w1 = r2_score(work[slice_w1], semilog_model(stress[slice_w1], params_w1))
+	rmse_w1 = root_mean_squared_error(work[slice_w1], linear_model(stress[slice_w1], params_w1))
+	r2_w1 = r2_score(work[slice_w1], linear_model(stress[slice_w1], params_w1))
 		
-	rmse_w2 = root_mean_squared_error(work[slice_w2], semilog_model(stress[slice_w2], params_w2))
-	r2_w2 = r2_score(work[slice_w2], semilog_model(stress[slice_w2], params_w2))
+	rmse_w2 = root_mean_squared_error(work[slice_w2], linear_model(stress[slice_w2], params_w2))
+	r2_w2 = r2_score(work[slice_w2], linear_model(stress[slice_w2], params_w2))
 
 	if save_metrics:
 		table: dict = {'Parameter': ['sp [kPa]', 'w1 [-]', 'w2 [-]'], 
