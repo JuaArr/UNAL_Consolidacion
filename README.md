@@ -1,6 +1,19 @@
 # UNAL_Consolidacion
 
-Para los bancos de carga antiguos solo se recibiran formatos tipo *txt* con la siguiente nomenclatura:
+## Sobre los formatos
+
+### Formatos válidos
+
+El código esta pensado para recibir los datos de carga en los siguientes formatos 
+
+- **byprobe**: Almacena los datos de consolidación de una única muestra en un único archivo `txt`. 
+- **simultaneous**: Almacena simultáneamente los datos de consolidación de diferentes muestras, previamente identificadas, en un mismo archivo `txt`.
+
+Por defecto los 
+
+### ¿Cómo nombrar los archivos adecuadamente?
+
+Para los bancos de carga antiguos solo se recibiran formatos tipo `txt` con la siguiente nomenclatura:
 
 `número de banco_responsable_proyecto_muestra_carga en kg.txt`
 

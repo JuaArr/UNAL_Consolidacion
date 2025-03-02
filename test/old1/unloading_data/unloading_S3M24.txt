@@ -1,3 +1,0 @@
-carga, c_unidad, deformacion, d_unidad
-16, kg, -3.700, mm
-8, kg, -3.606, mm

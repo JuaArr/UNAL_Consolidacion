@@ -1,0 +1,3 @@
+# load [kg],final deformation[mm]
+16,-3.700
+8,-3.606

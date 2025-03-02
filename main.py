@@ -5,17 +5,17 @@ import oedometer as oedo
 
 from matplotlib import pyplot as plt
 
-results_dir = Path("./test/old1")
-loading_dir = results_dir / "loading_data"
-properties_dir = results_dir / "properties"
-unloading_dir = results_dir / "unloading_data"
+results_dir = Path("./data_sample/simultaneous")
+loading_dir = results_dir/"loading_data"
+properties_dir = results_dir/"properties"
+unloading_dir = results_dir/"unloading_data"
 export_dir = Path("./export")
 
 test_dir = export_dir/'S3M24'
 
 def main() -> None:
 
-	oedo.pp_data(loading_dir, properties_dir, unloading_dir, export_dir)
+	oedo.initialize_preprocessing(loading_dir, properties_dir, unloading_dir, export_dir, format='simultaneous')
 
 	for test_dir in export_dir.iterdir():
 
@@ -24,7 +24,7 @@ def main() -> None:
 		unloading_data: dict = np.load(test_dir/'unloading.npy', allow_pickle=True).item()
 
 		n_preloading_stages = 1
-		n_loading_stages = len(loading_data.get('loads'))
+		n_loading_stages = len(loading_data.keys())
 		n_unloading_stages = len(unloading_data.get('loads'))
 		stages = [n_preloading_stages, n_loading_stages, n_unloading_stages]
 

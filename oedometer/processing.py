@@ -14,9 +14,11 @@ def consolidate_stages(loading_data: dict, unloading_data: dict, stages: npt.Arr
 	loads = np.empty(shape=(n_stages), dtype=np.float64)
 	heights = np.empty(shape=(n_stages, 2), dtype=np.float64)
 
+	sorted_loadings = sorted(list(loading_data.keys()), key=float)
+
 	# Special case when load is equal to 0 (initial expansion or compression)
 	initial_height = 0.0
-	final_height = loading_data.get('values')[0][0][-1]
+	final_height = loading_data.get(sorted_loadings[0]).get('deformation')[0]
 	loads[0] = 0.0
 	heights[0, :] = initial_height, final_height
 
@@ -25,9 +27,9 @@ def consolidate_stages(loading_data: dict, unloading_data: dict, stages: npt.Arr
 		if idx < 1+n_loading_stages:
 			fixed_idx = idx-1
 
-			initial_height = max(final_height, loading_data.get('values')[fixed_idx][0][-1])
-			final_height = loading_data.get('values')[fixed_idx][-1][-1]
-			loads[idx] = loading_data.get('loads')[fixed_idx]
+			initial_height = max(final_height, loading_data.get(sorted_loadings[fixed_idx]).get('deformation')[0])
+			final_height = loading_data.get(sorted_loadings[fixed_idx]).get('deformation')[-1]
+			loads[idx] = np.float64(sorted_loadings[fixed_idx])
 		else:
 			fixed_idx = idx-1-n_loading_stages
 
@@ -43,14 +45,13 @@ def load_correction(loads: npt.NDArray, properties: dict) -> npt.NDArray:
 	
 	names = properties.get('properties')
 
-	arg = np.nonzero(names=='la')
-	lever_arm = properties.get('values')[arg]
+	arg = np.nonzero(names==np.str_('la'))
+	lever_arm = properties.get('values')[arg][0]
 
 	arg = np.nonzero(names=='bm')
-	block_mass = properties.get('values')[arg]
+	block_mass = properties.get('values')[arg][0]
 	
-	loads *= lever_arm	
-	loads += block_mass
+	loads = lever_arm * loads + block_mass
 
 	return loads
 

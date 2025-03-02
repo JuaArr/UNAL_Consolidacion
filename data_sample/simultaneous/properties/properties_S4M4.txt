@@ -1,0 +1,9 @@
+# parametro,valor,unidad
+h,19.75,mm
+d,50.94,mm
+Gs,2.655,-
+w,0.444,-
+rm+m,176.54,g
+rm,105.21,g
+bm,255.73,g
+la,10,-

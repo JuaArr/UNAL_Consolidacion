@@ -1,9 +1,0 @@
-parametro, valor, unidad
-h, 19.67, mm
-d, 50.90, mm
-Gs, 2.654, -
-w, 1.367, -
-rm+m, 156.44, g
-rm, 104.11, g
-bm, 251.12, g
-la, 10, -
