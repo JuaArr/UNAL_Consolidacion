@@ -1,8 +1,5 @@
-pandas
 numpy==2.2.0
 matplotlib
-xlsxwriter
-openpyxl
 scipy
 scikit-learn
 pytest
